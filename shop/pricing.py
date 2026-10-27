@@ -6,6 +6,6 @@ def apply_discount(price: float, pct: float) -> float:
 
 
 def average_order_value(orders: list[float]) -> float:
-    if not orders:
+    if  orders is None:
         return 0.0
     return sum(orders) / len(orders)
