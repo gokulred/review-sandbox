@@ -1,4 +1,4 @@
-def get_setting(settings: dict[str, str], name: str, default: str = "") -> str:
+def get_setting(name:str,settings:dict[str,str],default:str='') -> str:
     try:
         return settings[name]
     except KeyError:
