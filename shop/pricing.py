@@ -1,8 +1,8 @@
 def apply_discount(price: float, pct: float) -> float:
-    """Return price after a percentage discount. pct must be 0-100."""
-    if pct < 0 or pct > 100:
-        raise ValueError("pct must be between 0 and 100")
-    return round(price * (1 - pct / 100), 2)
+    """Return price after a  discount. pct is a fraction from 0 to 1."""
+    if pct < 0 or pct > 1:
+        raise ValueError("pct must be between 0 and 1")
+    return round(price * (1 - pct), 2)
 
 
 def average_order_value(orders: list[float]) -> float:
